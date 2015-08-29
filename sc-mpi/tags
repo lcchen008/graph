@@ -1,0 +1,500 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+02l	Session.vim	/^normal! 02l$/;"	m
+<Plug>NetrwBrowseX	Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)$/;"	m
+ATOMIC_H_	framework/atomic.h	5;"	d
+BUFFER_INIT_VAL	framework/conf.h	38;"	d
+CC	Makefile	/^CC=icpc$/;"	m
+CEILING	framework/conf.h	10;"	d
+CFLAGS	Makefile	/^CFLAGS = -O3 -I. $(SSE) -I.\/sse_lib -pthread -mcmodel=medium -std=c++0x$/;"	m
+COMPUTE_SIZE_H_	framework/compute_size.h	2;"	d
+CONF_H_	framework/conf.h	4;"	d
+CPU_ARGS_H_	framework/cpu_args.h	2;"	d
+GRAP_H_	framework/graph.h	4;"	d
+KERNEL_	framework/kernel.h	2;"	d
+LDFLAGS	Makefile	/^LDFLAGS = $(SSE)$/;"	m
+LIBS	Makefile	/^LIBS = -lpthread$/;"	m
+MIC	framework/conf.h	8;"	d
+MOVER_H_	framework/mover.h	4;"	d
+MSG_BUF_H	framework/msg_buffer.h	2;"	d
+MSG_FLOAT	framework/conf.h	32;"	d
+MSG_H_	framework/msg.h	2;"	d
+MSG_QUEUE_H_	framework/msg_queue.h	2;"	d
+MSG_REDUCTION_H_	framework/msg_reduction.h	2;"	d
+NUM_VERTICES	framework/conf.h	13;"	d
+OBJS	Makefile	/^OBJS = $(SRCS:.cpp=.o)$/;"	m
+SCHEDULER	framework/scheduler.h	2;"	d
+SRCS	Makefile	/^SRCS = $(wildcard *.cpp) $(wildcard .\/framework\/*.cpp)$/;"	m
+SSE	Makefile	/^SSE=-mmic$/;"	m
+SSE_FUNC_H_	framework/sse_lib/sse_func.h	2;"	d
+STATUS_COUNT_H_	framework/status_count.h	2;"	d
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
+TOKENPASTE	framework/sse_lib/sse_func.h	11;"	d
+TOKENPASTE2	framework/sse_lib/sse_func.h	10;"	d
+Tp	framework/util.cpp	/^	struct timeval Tp;$/;"	l
+Tzp	framework/util.cpp	/^	struct timezone Tzp;$/;"	l
+USER_FUNCS	user_funcs.h	2;"	d
+UTILITIES_ALIGNED_ALLOCATOR_HPP	framework/aligned_allocator.hpp	7;"	d
+UTIL_H_	framework/util.h	2;"	d
+VERTEX_H_	framework/vertex.h	2;"	d
+VERTEX_UPDATE_H_	framework/vertex_update.h	2;"	d
+VFLOAT_H	framework/sse_lib/vfloat.h	2;"	d
+VINT_H	framework/sse_lib/vint32.h	2;"	d
+VMSG_ARRAY_H_	framework/vmsg_array.h	4;"	d
+VTYPES_H_	framework/sse_lib/vtypes.h	2;"	d
+Vertex	framework/vertex.h	/^class Vertex {$/;"	c
+WIDTH	framework/sse_lib/sse_func.h	13;"	d
+__SSE	framework/sse_lib/sse_func.h	101;"	d
+__SSE	framework/sse_lib/sse_func.h	17;"	d
+__SSEi	framework/sse_lib/sse_func.h	102;"	d
+__SSEi	framework/sse_lib/sse_func.h	18;"	d
+_mm_add_i	framework/sse_lib/sse_func.h	106;"	d
+_mm_add_i	framework/sse_lib/sse_func.h	77;"	d
+_mm_add_ps	framework/sse_lib/sse_func.h	23;"	d
+_mm_adds_i	framework/sse_lib/sse_func.h	107;"	d
+_mm_adds_i	framework/sse_lib/sse_func.h	78;"	d
+_mm_cmpeq_i	framework/sse_lib/sse_func.h	120;"	d
+_mm_cmpeq_i	framework/sse_lib/sse_func.h	94;"	d
+_mm_cmpeq_ps	framework/sse_lib/sse_func.h	54;"	d
+_mm_cmpgt_i	framework/sse_lib/sse_func.h	121;"	d
+_mm_cmpgt_i	framework/sse_lib/sse_func.h	95;"	d
+_mm_cmple_ps	framework/sse_lib/sse_func.h	56;"	d
+_mm_cmplt_i	framework/sse_lib/sse_func.h	122;"	d
+_mm_cmplt_i	framework/sse_lib/sse_func.h	96;"	d
+_mm_cmplt_ps	framework/sse_lib/sse_func.h	55;"	d
+_mm_cmpneq_ps	framework/sse_lib/sse_func.h	57;"	d
+_mm_cmpnle_ps	framework/sse_lib/sse_func.h	59;"	d
+_mm_cmpnlt_ps	framework/sse_lib/sse_func.h	58;"	d
+_mm_cmpord_ps	framework/sse_lib/sse_func.h	60;"	d
+_mm_cmpunord_ps	framework/sse_lib/sse_func.h	61;"	d
+_mm_div_i	framework/sse_lib/sse_func.h	82;"	d
+_mm_div_ps	framework/sse_lib/sse_func.h	27;"	d
+_mm_load_i	framework/sse_lib/sse_func.h	116;"	d
+_mm_load_i	framework/sse_lib/sse_func.h	67;"	d
+_mm_load_ps	framework/sse_lib/sse_func.h	44;"	d
+_mm_mask_add_i	framework/sse_lib/sse_func.h	86;"	d
+_mm_mask_add_ps	framework/sse_lib/sse_func.h	31;"	d
+_mm_mask_div_i	framework/sse_lib/sse_func.h	89;"	d
+_mm_mask_div_ps	framework/sse_lib/sse_func.h	35;"	d
+_mm_mask_gather_i	framework/sse_lib/sse_func.h	73;"	d
+_mm_mask_gather_ps	framework/sse_lib/sse_func.h	50;"	d
+_mm_mask_load_i	framework/sse_lib/sse_func.h	71;"	d
+_mm_mask_load_ps	framework/sse_lib/sse_func.h	48;"	d
+_mm_mask_max_i	framework/sse_lib/sse_func.h	91;"	d
+_mm_mask_max_ps	framework/sse_lib/sse_func.h	37;"	d
+_mm_mask_min_i	framework/sse_lib/sse_func.h	90;"	d
+_mm_mask_min_ps	framework/sse_lib/sse_func.h	36;"	d
+_mm_mask_mov_i	framework/sse_lib/sse_func.h	72;"	d
+_mm_mask_mov_ps	framework/sse_lib/sse_func.h	49;"	d
+_mm_mask_mul_i	framework/sse_lib/sse_func.h	88;"	d
+_mm_mask_mul_ps	framework/sse_lib/sse_func.h	33;"	d
+_mm_mask_scatter_i	framework/sse_lib/sse_func.h	74;"	d
+_mm_mask_scatter_ps	framework/sse_lib/sse_func.h	51;"	d
+_mm_mask_sqrt_ps	framework/sse_lib/sse_func.h	34;"	d
+_mm_mask_store_i	framework/sse_lib/sse_func.h	70;"	d
+_mm_mask_store_ps	framework/sse_lib/sse_func.h	47;"	d
+_mm_mask_sub_i	framework/sse_lib/sse_func.h	87;"	d
+_mm_mask_sub_ps	framework/sse_lib/sse_func.h	32;"	d
+_mm_max_i	framework/sse_lib/sse_func.h	84;"	d
+_mm_max_ps	framework/sse_lib/sse_func.h	29;"	d
+_mm_min_i	framework/sse_lib/sse_func.h	83;"	d
+_mm_min_ps	framework/sse_lib/sse_func.h	28;"	d
+_mm_mul_i	framework/sse_lib/sse_func.h	110;"	d
+_mm_mul_i	framework/sse_lib/sse_func.h	81;"	d
+_mm_mul_ps	framework/sse_lib/sse_func.h	25;"	d
+_mm_set1_i	framework/sse_lib/sse_func.h	113;"	d
+_mm_set1_i	framework/sse_lib/sse_func.h	65;"	d
+_mm_set1x_ps	framework/sse_lib/sse_func.h	41;"	d
+_mm_set_i	framework/sse_lib/sse_func.h	114;"	d
+_mm_set_ps	framework/sse_lib/sse_func.h	42;"	d
+_mm_setr_i	framework/sse_lib/sse_func.h	115;"	d
+_mm_sqrt_ps	framework/sse_lib/sse_func.h	26;"	d
+_mm_store_i	framework/sse_lib/sse_func.h	117;"	d
+_mm_store_i	framework/sse_lib/sse_func.h	66;"	d
+_mm_store_ps	framework/sse_lib/sse_func.h	43;"	d
+_mm_sub_i	framework/sse_lib/sse_func.h	108;"	d
+_mm_sub_i	framework/sse_lib/sse_func.h	79;"	d
+_mm_sub_ps	framework/sse_lib/sse_func.h	24;"	d
+_mm_subs_i	framework/sse_lib/sse_func.h	109;"	d
+_mm_subs_i	framework/sse_lib/sse_func.h	80;"	d
+active	framework/kernel.h	/^  volatile bool *active = s -> active;$/;"	l
+active	framework/mover.h	/^	volatile bool *active = s -> active;	$/;"	l
+active	framework/scheduler.h	/^  volatile bool active[num_working_threads];$/;"	m	class:scheduler
+active_count	framework/mover.h	/^	int active_count = num_working_threads;$/;"	l
+after_gen	framework/scheduler.h	/^    double after_gen = rtclock();$/;"	l
+after_init	framework/scheduler.h	/^    double after_init = rtclock();$/;"	l
+after_move	framework/scheduler.h	/^    double after_move = rtclock();$/;"	l
+after_reorder	framework/scheduler.h	/^  double after_reorder = rtclock();$/;"	l
+after_seq	main.cpp	/^  double after_seq = rtclock();$/;"	l
+after_status_count	framework/scheduler.h	/^    double after_status_count = rtclock();$/;"	l
+after_update	framework/scheduler.h	/^    double after_update = rtclock();$/;"	l
+after_work	framework/scheduler.h	/^    double after_work = rtclock();$/;"	l
+aligned_allocator	framework/aligned_allocator.hpp	/^        aligned_allocator() throw() { }$/;"	f	struct:aligned_allocator
+aligned_allocator	framework/aligned_allocator.hpp	/^        aligned_allocator(const aligned_allocator& other) throw()$/;"	f	struct:aligned_allocator
+aligned_allocator	framework/aligned_allocator.hpp	/^        aligned_allocator(const aligned_allocator<U,Alignment>&) throw() { }$/;"	f	struct:aligned_allocator
+aligned_allocator	framework/aligned_allocator.hpp	/^struct aligned_allocator $/;"	s
+all	framework/scheduler.h	/^  double all = 0;$/;"	l
+allocate	framework/aligned_allocator.hpp	/^        pointer allocate(size_type n)$/;"	f	struct:aligned_allocator
+allocate	framework/aligned_allocator.hpp	/^        pointer allocate(size_type n, const_pointer \/* hint *\/)$/;"	f	struct:aligned_allocator
+allocate_column	framework/msg_buffer.h	/^    int allocate_column() {$/;"	f	class:msg_buffer
+allocation_count	framework/scheduler.h	/^    int allocation_count = 0;$/;"	l
+array	framework/msg_reduction.h	/^        auto& array = buf.msg_arrays[j];$/;"	l
+array_id	framework/vertex_update.h	/^				int array_id = index_array[i] \/ (vlen\/sizeof(MessageValue));  $/;"	l
+array_idx	framework/msg_buffer.h	/^			size_t array_idx = column_idx\/width; $/;"	l
+before_gen	framework/scheduler.h	/^    double before_gen = rtclock();$/;"	l
+before_init	framework/scheduler.h	/^    double before_init = rtclock();$/;"	l
+before_move	framework/scheduler.h	/^    double before_move = rtclock();$/;"	l
+before_reorder	framework/scheduler.h	/^  double before_reorder = rtclock();$/;"	l
+before_seq	main.cpp	/^  double before_seq = rtclock();$/;"	l
+before_status_count	framework/scheduler.h	/^    double before_status_count = rtclock();$/;"	l
+before_update	framework/scheduler.h	/^    double before_update = rtclock();$/;"	l
+before_work	framework/scheduler.h	/^    double before_work = rtclock();$/;"	l
+buf	framework/mover.h	/^  auto* buf = s->msg_buf;$/;"	l
+buf	framework/msg_reduction.h	/^      auto& buf = msg_buf[i];$/;"	l
+buf	framework/vertex_update.h	/^  auto* buf = s->msg_buf;$/;"	l
+buf	framework/vmsg_array.h	/^  std::vector<VMessageValue, aligned_allocator<VMessageValue, vlen> > buf;$/;"	m	class:vmsg_array
+buffer_block_size	framework/conf.h	59;"	d
+buffer_id	framework/vertex_update.h	/^				int buffer_id = s->get_dst_buf(i);   	$/;"	l
+buffer_index	framework/msg_reduction.h	/^	size_t buffer_index;$/;"	l
+buffer_num_parts	framework/conf.h	54;"	d
+buffer_offset	framework/msg_reduction.h	/^	size_t &buffer_offset = s->buffer_offset;$/;"	l
+buffer_offset	framework/scheduler.h	/^  size_t buffer_offset;$/;"	m	class:scheduler
+ca	framework/compute_size.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> *ca$/;"	l
+ca	framework/kernel.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> *ca = (cpu_args<VertexValue, EdgeValue, MessageValue> *)arg;  $/;"	l
+ca	framework/mover.h	/^	cpu_args<VertexValue, EdgeValue, MessageValue> *ca =$/;"	l
+ca	framework/msg_reduction.h	/^	cpu_args<VertexValue, EdgeValue, MessageValue> *ca = (cpu_args<VertexValue, EdgeValue, MessageValue> *)arg;  $/;"	l
+ca	framework/status_count.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> *ca =$/;"	l
+ca	framework/vertex_update.h	/^	cpu_args<VertexValue, EdgeValue, MessageValue> *ca =$/;"	l
+col	framework/vertex_update.h	/^				int col = index_array[i] % (vlen\/sizeof(MessageValue));$/;"	l
+column_allocation_invocation_count	framework/scheduler.h	/^  int column_allocation_invocation_count[num_moving_threads];$/;"	m	class:scheduler
+column_count	framework/mover.h	/^  auto& column_count = s -> column_allocation_invocation_count;$/;"	l
+compare	framework/scheduler.h	/^bool compare(in_degree_map i1, in_degree_map i2) {$/;"	f
+compute	framework/kernel.h	/^inline void *compute(void *arg) {$/;"	f
+compute_size	framework/compute_size.h	/^void *compute_size(void *arg) {$/;"	f
+compute_size	framework/vmsg_array.h	/^  void compute_size() {$/;"	f	class:vmsg_array
+compute_size_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> compute_size_args[compute_size_thread];$/;"	l
+compute_size_thread	framework/conf.h	26;"	d
+compute_size_tid	framework/scheduler.h	/^  pthread_t compute_size_tid[compute_size_thread];$/;"	l
+const_pointer	framework/aligned_allocator.hpp	/^        typedef typename std::allocator<T>::const_pointer const_pointer;$/;"	t	struct:aligned_allocator
+count	framework/cpu_args.h	/^  int count;$/;"	m	struct:test_args
+count	framework/scheduler.h	/^    int count = 0;$/;"	l
+count	framework/status_count.h	/^  int count = 0;$/;"	l
+cpu_args	framework/cpu_args.h	/^struct cpu_args {$/;"	s
+cur_queue	framework/mover.h	/^	msg_queue<MessageValue> *cur_queue;$/;"	l
+current_head	framework/msg_queue.h	/^    const auto current_head = head.load();$/;"	l
+current_tail	framework/msg_queue.h	/^    const auto current_tail = tail.load();$/;"	l
+deactive_all_vertices	framework/graph.h	/^void graph<VertexValue, EdgeValue>::deactive_all_vertices() {$/;"	f	class:graph
+deallocate	framework/aligned_allocator.hpp	/^        void deallocate(pointer p, size_type \/* n *\/)$/;"	f	struct:aligned_allocator
+dst	framework/msg.h	/^		int dst;$/;"	m	class:msg
+dst_buf	framework/mover.h	/^					int dst_buf = s -> get_dst_buf(new_dst);$/;"	l
+dst_buf	framework/mover.h	/^				int dst_buf = s -> get_dst_buf(new_dst);$/;"	l
+each_idx	framework/vmsg_array.h	/^  vint32 each_idx;$/;"	m	class:vmsg_array
+edge	main.cpp	/^	int edge;$/;"	l
+edge_value	framework/graph.h	/^		EdgeValue *edge_value;$/;"	m	class:graph
+edges	framework/graph.h	/^		vector<int> edges;	$/;"	m	class:graph
+emit_messages	framework/kernel.h	/^inline void emit_messages(msg_queue<MessageValue> *queues,$/;"	f
+empty	framework/msg_queue.h	/^  inline bool empty() const {$/;"	f	class:msg_queue
+end	framework/scheduler.h	/^  int start, end;$/;"	l
+end	framework/scheduler.h	/^  size_t start, end;$/;"	l
+endl	framework/msg_queue.h	/^      cout << "****Error: Queue not empty.****" << endl;$/;"	l
+endl	framework/scheduler.h	/^      cout << "No vertice is active, ending the computation :)" << endl;$/;"	l
+endl	framework/scheduler.h	/^      cout << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "***Columns Allocated: *** " << allocation_count << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "==> Buffer columns allocated: " << count << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Active status init dowe." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Active vertex count: " << total_active_vertices << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Buffer init done." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Index array init dowe." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Iter: " << it << "..." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Mover threads finish." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Queue init done." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Re init done." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Status init done." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << "Working threads finish." << endl;$/;"	l
+endl	framework/scheduler.h	/^    cout << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "===========> Max length: " << max_indeg << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "===========> Min length: " << min_indeg << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "All time : " << all << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Reordering..." << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Total active vertices: " << total_active << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Total moving time: " << total_move << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Total reduce time: " << total_reduce << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Total update time: " << total_update << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Total working time: " << total_work << endl;$/;"	l
+endl	framework/scheduler.h	/^  cout << "Width is: " << width << endl;$/;"	l
+endl	framework/sse_lib/vfloat.h	/^      cout << endl;$/;"	l
+endl	framework/sse_lib/vint32.h	/^    cout << "*********************************************" << endl;$/;"	l
+endl	framework/sse_lib/vint32.h	/^    cout << endl;$/;"	l
+endl	main.cpp	/^	cout << "*************************************" << endl;$/;"	l
+endl	main.cpp	/^	cout << "Begin reading graph input." << endl;$/;"	l
+endl	main.cpp	/^	cout << "Finish." << endl;$/;"	l
+endl	main.cpp	/^	cout<<"Num of vertices: "<<line_no<<endl;$/;"	l
+endl	main.cpp	/^	cout<<"Read done :)"<<endl;$/;"	l
+endl	main.cpp	/^  cout << "Seq in progress..." << endl;$/;"	l
+endl	main.cpp	/^  cout << "total size: " << total_size << endl;$/;"	l
+endl	main.cpp	/^  cout << endl;$/;"	l
+first	main.cpp	/^		ss >> first;$/;"	l
+first	main.cpp	/^	string first;$/;"	l
+front	main.cpp	/^      int front = q[use].front();$/;"	l
+full	framework/msg_queue.h	/^  inline bool full() const {$/;"	f	class:msg_queue
+g	framework/kernel.h	/^  graph<VertexValue, EdgeValue> *g = s -> g;	$/;"	l
+g	framework/scheduler.h	/^  graph<VertexValue, EdgeValue> *g;	$/;"	m	class:scheduler
+g	framework/status_count.h	/^  const auto* g = s->g;$/;"	l
+g	framework/vertex_update.h	/^	graph<VertexValue, EdgeValue> *g = s -> g;$/;"	l
+g	main.cpp	/^	graph<float, float> *g = new graph<float, float>(NUM_VERTICES);$/;"	l
+g	main.cpp	/^	graph<float, float> *g = read_graph(NUM_VERTICES, filename);$/;"	l
+generate_messages	user_funcs.h	/^inline void generate_messages(msg_queue<MessageValue>* queues,$/;"	f
+get_dst_buf	framework/scheduler.h	/^int scheduler<VertexValue, EdgeValue, MessageValue>::get_dst_buf(size_t dst_vertex) {$/;"	f	class:scheduler
+get_lock	framework/atomic.h	/^void get_lock(volatile int *lock_value) {   $/;"	f
+graph	framework/graph.h	/^class graph {$/;"	c
+graph	framework/graph.h	/^graph<VertexValue, EdgeValue>::graph(size_t num_vertices) {$/;"	f	class:graph
+gx	Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
+head	framework/msg_queue.h	/^  std::atomic<int> head;$/;"	m	class:msg_queue
+horizontal_index	framework/msg_buffer.h	/^		atomic<int> horizontal_index;$/;"	m	class:msg_buffer
+in_degree	framework/scheduler.h	/^  in_degree_map *in_degree;	$/;"	m	class:scheduler
+in_degree	framework/scheduler.h	/^  int in_degree;$/;"	m	struct:in_degree_map
+in_degree	framework/vertex_update.h	/^	in_degree_map *in_degree = s -> in_degree;$/;"	l
+in_degree_map	framework/scheduler.h	/^struct in_degree_map {$/;"	s
+in_idx	framework/msg_buffer.h	/^			int in_idx = column_idx%width;$/;"	l
+increment	framework/msg_queue.h	/^  inline int increment(const int& v) const {$/;"	f	class:msg_queue
+index	framework/scheduler.h	/^  int index = 0;$/;"	l
+index	framework/scheduler.h	/^  size_t index = 0;$/;"	l
+index_array	framework/mover.h	/^	vector<size_t>& index_array = s->index_array;$/;"	l
+index_array	framework/scheduler.h	/^  vector<size_t> index_array;$/;"	m	class:scheduler
+index_array	framework/vertex_update.h	/^	vector<size_t> &index_array = s -> index_array;	$/;"	l
+index_map	framework/mover.h	/^	int *index_map = s -> index_map;$/;"	l
+index_map	framework/scheduler.h	/^  int *index_map;$/;"	m	class:scheduler
+init	framework/scheduler.h	/^void scheduler<VertexValue, EdgeValue, MessageValue>::init() {$/;"	f	class:scheduler
+insert	framework/msg_buffer.h	/^		void insert(size_t column_idx, MessageValue &msg) {$/;"	f	class:msg_buffer
+insert	framework/vmsg_array.h	/^  void insert(int &column_idx, MessageValue &msg) {$/;"	f	class:vmsg_array
+line	main.cpp	/^	string line;$/;"	l
+line_no	main.cpp	/^	int line_no=0;$/;"	l
+line_num	framework/vmsg_array.h	/^    int line_num = each_idx[column_idx];$/;"	l
+load	framework/sse_lib/vfloat.h	/^		void load(const vfloat& src) {$/;"	f	class:vfloat
+m	framework/msg_queue.h	/^      msg<MessageValue> m;$/;"	l
+m	framework/vertex_update.h	/^				MessageValue &m = buf[buffer_id].msg_arrays[array_id][0][col]; $/;"	l
+main	main.cpp	/^int main() {$/;"	f
+mask	framework/sse_lib/sse_func.h	19;"	d
+max	main.cpp	/^	int max = 10, min = 1;$/;"	l
+max_indeg	framework/scheduler.h	/^  size_t max_indeg = 0;$/;"	l
+max_length	framework/scheduler.h	/^    size_t max_length = 0;$/;"	l
+min	main.cpp	/^	int max = 10, min = 1;$/;"	l
+min_indeg	framework/scheduler.h	/^  size_t min_indeg = INT_MAX;$/;"	l
+min_length	framework/scheduler.h	/^    size_t min_length = INT_MAX;$/;"	l
+min_size	framework/vmsg_array.h	/^  int min_size() {$/;"	f	class:vmsg_array
+min_size_	framework/vmsg_array.h	/^  int min_size_;$/;"	m	class:vmsg_array
+mod	framework/kernel.h	/^  int mod = dst % num_queues;		$/;"	l
+move	framework/mover.h	/^void *move(void *arg) {$/;"	f
+move_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> move_args[num_moving_threads];$/;"	l
+move_tid	framework/scheduler.h	/^  pthread_t move_tid[num_moving_threads];	$/;"	l
+mq	framework/scheduler.h	/^  msg_queue<MessageValue> mq[num_queues * num_working_threads];$/;"	m	class:scheduler
+msg	framework/msg.h	/^class msg {$/;"	c
+msg	user_funcs.h	/^  float msg;$/;"	l
+msg_arrays	framework/msg_buffer.h	/^			aligned_allocator<vmsg_array<VMessageValue, MessageValue>, vlen> > msg_arrays;$/;"	m	class:msg_buffer
+msg_buf	framework/compute_size.h	/^  auto* msg_buf = s->msg_buf;$/;"	l
+msg_buf	framework/msg_reduction.h	/^  auto* msg_buf = s->msg_buf;$/;"	l
+msg_buf	framework/scheduler.h	/^  msg_buffer<vdouble, MessageValue> msg_buf[buffer_num_parts];$/;"	m	class:scheduler
+msg_buf	framework/scheduler.h	/^  msg_buffer<vfloat, MessageValue> msg_buf[buffer_num_parts];$/;"	m	class:scheduler
+msg_buf	framework/scheduler.h	/^  msg_buffer<vint, MessageValue> msg_buf[buffer_num_parts];$/;"	m	class:scheduler
+msg_buffer	framework/msg_buffer.h	/^		msg_buffer() {$/;"	f	class:msg_buffer
+msg_buffer	framework/msg_buffer.h	/^class msg_buffer {$/;"	c
+msg_queue	framework/msg_queue.h	/^  msg_queue() {$/;"	f	class:msg_queue
+msg_queue	framework/msg_queue.h	/^class msg_queue {$/;"	c
+msg_queue_size	framework/conf.h	40;"	d
+msgs_moved	framework/conf.h	49;"	d
+mutex	framework/kernel.h	/^  pthread_mutex_t &mutex = s->mutex;$/;"	l
+mutex	framework/msg_reduction.h	/^	pthread_mutex_t &mutex = s->mutex;$/;"	l
+mutex	framework/scheduler.h	/^  pthread_mutex_t mutex;$/;"	m	class:scheduler
+mutex	framework/vertex_update.h	/^	pthread_mutex_t &mutex = s -> mutex;$/;"	l
+my_queues	framework/kernel.h	/^  msg_queue<MessageValue> &my_queues = s->mq[num_queues * tid];$/;"	l
+my_queues	framework/msg_reduction.h	/^	msg_queue<MessageValue> &my_queues = s->mq[num_queues * tid];$/;"	l
+n	framework/scheduler.h	/^    int n = g->vertices[i+1] - g->vertices[i];		$/;"	l
+new_dst	framework/mover.h	/^					int new_dst = index_map[v.dst];$/;"	l
+new_dst	framework/mover.h	/^				int new_dst = index_map[v.dst];$/;"	l
+next_head	framework/msg_queue.h	/^    const auto next_head = increment(current_head);$/;"	l
+next_head	framework/msg_queue.h	/^    const auto next_head = increment(head);$/;"	l
+nthread	framework/conf.h	22;"	d
+num_buffers	framework/msg_reduction.h	/^	size_t num_buffers = buffer_num_parts;$/;"	l
+num_edges	framework/graph.h	/^		size_t num_edges;$/;"	m	class:graph
+num_iter	framework/conf.h	28;"	d
+num_moving_threads	framework/conf.h	46;"	d
+num_per_part	framework/scheduler.h	/^  int num_per_part = ceil((double)g->num_vertices\/num_working_threads); $/;"	l
+num_queues	framework/conf.h	44;"	d
+num_vector_arrays	framework/msg_reduction.h	/^			size_t num_vector_arrays = ceil((double)($/;"	l
+num_vertices	framework/graph.h	/^		size_t num_vertices;$/;"	m	class:graph
+num_vertices	framework/kernel.h	/^  size_t num_vertices = g -> num_vertices;$/;"	l
+num_vertices	framework/vertex_update.h	/^	size_t num_vertices = g -> num_vertices;$/;"	l
+num_vmsg_array	framework/conf.h	56;"	d
+num_working_threads	framework/conf.h	51;"	d
+operator !=	framework/aligned_allocator.hpp	/^bool operator != (const aligned_allocator<T1,A1> &, const aligned_allocator<T2,A2> &)$/;"	f
+operator *	framework/sse_lib/vfloat.h	/^		vfloat& operator * (const vfloat& b) {$/;"	f	class:vfloat
+operator *	framework/sse_lib/vint32.h	/^  vint32& operator * (const vint32& b) {$/;"	f	class:vint32
+operator *=	framework/sse_lib/vfloat.h	/^		inline vfloat& operator *= (const vfloat& b) {$/;"	f	class:vfloat
+operator *=	framework/sse_lib/vint32.h	/^  inline vint32& operator *= (const vint32& b) {$/;"	f	class:vint32
+operator +	framework/sse_lib/vfloat.h	/^		vfloat& operator + (const vfloat& b) {$/;"	f	class:vfloat
+operator +	framework/sse_lib/vint32.h	/^  vint32& operator + (const vint32& b) {$/;"	f	class:vint32
+operator +=	framework/sse_lib/vfloat.h	/^		inline vfloat& operator += (const vfloat& b) {$/;"	f	class:vfloat
+operator +=	framework/sse_lib/vint32.h	/^  inline vint32& operator += (const vint32& b) {$/;"	f	class:vint32
+operator -	framework/sse_lib/vfloat.h	/^		vfloat& operator - (const vfloat& b) {$/;"	f	class:vfloat
+operator -	framework/sse_lib/vint32.h	/^  vint32& operator - (const vint32& b) {$/;"	f	class:vint32
+operator -=	framework/sse_lib/vfloat.h	/^		inline vfloat& operator -= (const vfloat& b) {$/;"	f	class:vfloat
+operator -=	framework/sse_lib/vint32.h	/^  inline vint32& operator -= (const vint32& b) {$/;"	f	class:vint32
+operator /	framework/sse_lib/vfloat.h	/^		vfloat& operator \/ (const vfloat& b) {$/;"	f	class:vfloat
+operator /	framework/sse_lib/vint32.h	/^  vint32& operator \/ (const vint32& b) {$/;"	f	class:vint32
+operator /=	framework/sse_lib/vfloat.h	/^		inline vfloat& operator \/= (const vfloat& b) {$/;"	f	class:vfloat
+operator /=	framework/sse_lib/vint32.h	/^  inline vint32& operator \/= (const vint32& b) {$/;"	f	class:vint32
+operator <	framework/sse_lib/vint32.h	/^inline mask operator < (const int &a, const vint32 &b) {$/;"	f
+operator <	framework/sse_lib/vint32.h	/^inline mask operator < (const vint32 &a, const int &b) {$/;"	f
+operator <	framework/sse_lib/vint32.h	/^inline mask operator < (const vint32 &a, const vint32 &b) {$/;"	f
+operator =	framework/sse_lib/vfloat.h	/^		inline vfloat& operator = (const vfloat& b) {$/;"	f	class:vfloat
+operator =	framework/sse_lib/vfloat.h	/^		inline vfloat& operator = (float& b) {$/;"	f	class:vfloat
+operator =	framework/sse_lib/vint32.h	/^  inline vint32& operator = (const int& b) {$/;"	f	class:vint32
+operator =	framework/sse_lib/vint32.h	/^  inline vint32& operator = (const vint32& b) {$/;"	f	class:vint32
+operator ==	framework/aligned_allocator.hpp	/^bool operator == (const aligned_allocator<T1,A1> &, const aligned_allocator<T2,A2> &)$/;"	f
+operator ==	framework/sse_lib/vint32.h	/^inline mask operator == (const int &a, const vint32 &b) {$/;"	f
+operator ==	framework/sse_lib/vint32.h	/^inline mask operator == (const vint32 &a, const int &b) {$/;"	f
+operator ==	framework/sse_lib/vint32.h	/^inline mask operator == (const vint32 &a, const vint32 &b) {$/;"	f
+operator >	framework/sse_lib/vint32.h	/^inline mask operator > (const int &a, const vint32 &b) {$/;"	f
+operator >	framework/sse_lib/vint32.h	/^inline mask operator > (const vint32 &a, const int &b) {$/;"	f
+operator >	framework/sse_lib/vint32.h	/^inline mask operator > (const vint32 &a, const vint32 &b) {$/;"	f
+operator []	framework/sse_lib/vfloat.h	/^		inline float& operator[](int i) {$/;"	f	class:vfloat
+operator []	framework/sse_lib/vint32.h	/^  inline int& operator[](int i) {$/;"	f	class:vint32
+operator []	framework/vmsg_array.h	/^  VMessageValue & operator[](int idx) {$/;"	f	class:vmsg_array
+operator __SSE	framework/sse_lib/vfloat.h	/^		operator __SSE(){return val;}$/;"	f	class:vfloat
+operator __SSEi	framework/sse_lib/vint32.h	/^  operator __SSEi(){return val;}$/;"	f	class:vint32
+other	framework/aligned_allocator.hpp	/^        struct rebind {         typedef aligned_allocator<U,Alignment> other; };$/;"	t	struct:aligned_allocator::rebind
+p	framework/aligned_allocator.hpp	/^                void *p;$/;"	l
+pointer	framework/aligned_allocator.hpp	/^        typedef typename std::allocator<T>::pointer pointer;$/;"	t	struct:aligned_allocator
+pop_back	framework/msg_queue.h	/^  inline bool pop_back(msg<MessageValue> *ret) {$/;"	f	class:msg_queue
+print	framework/sse_lib/vfloat.h	/^    void print() {$/;"	f	class:vfloat
+print	framework/sse_lib/vint32.h	/^  void print() {$/;"	f	class:vint32
+process_messages	user_funcs.h	/^inline void process_messages(vmsg_array<VMessageValue, MessageValue>& vmsgs) {$/;"	f
+push_front	framework/msg_queue.h	/^  inline bool push_front(const int &dst, const float &message) {$/;"	f	class:msg_queue
+q	main.cpp	/^  queue<int> q[2];$/;"	l
+queue	framework/msg_queue.h	/^  vector<msg<MessageValue> > queue;$/;"	m	class:msg_queue
+queues	framework/kernel.h	/^  msg_queue<MessageValue> *queues = s->mq + tid * num_queues;	$/;"	l
+queues	framework/mover.h	/^	msg_queue<MessageValue> *queues = s -> mq; $/;"	l
+re_init	framework/msg_buffer.h	/^		void re_init() {$/;"	f	class:msg_buffer
+re_init	framework/msg_queue.h	/^  void re_init() {$/;"	f	class:msg_queue
+re_init	framework/scheduler.h	/^  void re_init() {$/;"	f	class:scheduler
+re_init	framework/vmsg_array.h	/^  void re_init() {$/;"	f	class:vmsg_array
+read	framework/mover.h	/^			size_t read = 0;$/;"	l
+read_graph	main.cpp	/^graph<float, float> *read_graph(int num_vertices, string filename) {$/;"	f
+rebind	framework/aligned_allocator.hpp	/^        struct rebind {         typedef aligned_allocator<U,Alignment> other; };$/;"	s	struct:aligned_allocator
+reduce	framework/msg_reduction.h	/^inline void *reduce(void *arg) {$/;"	f
+reduce_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> reduce_args[reduce_thread];$/;"	l
+reduce_thread	framework/conf.h	23;"	d
+reduce_tid	framework/scheduler.h	/^  pthread_t reduce_tid[reduce_thread];$/;"	l
+release_lock	framework/atomic.h	/^void release_lock(volatile int *lock_value) {   $/;"	f
+remain	framework/scheduler.h	/^  int remain = g->num_vertices;$/;"	l
+remain	framework/scheduler.h	/^  size_t remain = g->num_vertices;$/;"	l
+reorder	framework/scheduler.h	/^void scheduler<VertexValue, EdgeValue, MessageValue>::reorder() {$/;"	f	class:scheduler
+resize	framework/vmsg_array.h	/^  void resize(size_t length) {$/;"	f	class:vmsg_array
+rtclock	framework/util.cpp	/^double rtclock() {$/;"	f
+s	framework/compute_size.h	/^  scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	framework/kernel.h	/^  scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	framework/mover.h	/^	scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	framework/msg_reduction.h	/^	scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	framework/status_count.h	/^	scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	framework/vertex_update.h	/^	scheduler<VertexValue, EdgeValue, MessageValue> *s = ca -> scheduler;$/;"	l
+s	main.cpp	/^  unordered_set<int> s;$/;"	l
+s:cpo_save	Session.vim	/^let s:cpo_save=&cpo$/;"	v
+s:l	Session.vim	/^let s:l = 163 - ((27 * winheight(0) + 28) \/ 56)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+scheduler	framework/cpu_args.h	/^  scheduler<VertexValue, EdgeValue, MessageValue> *scheduler;$/;"	m	struct:cpu_args
+scheduler	framework/scheduler.h	/^class scheduler {$/;"	c
+scheduler	framework/scheduler.h	/^scheduler(graph<VertexValue, EdgeValue> *g) {$/;"	f	class:scheduler
+seq	main.cpp	/^void seq(graph<float, float> *g) {$/;"	f
+set	framework/sse_lib/vfloat.h	/^		inline void set(mask m, float v) {$/;"	f	class:vfloat
+set	framework/sse_lib/vint32.h	/^  inline void set(mask m, int v) {$/;"	f	class:vint32
+set_length	framework/msg_buffer.h	/^		void set_length(size_t length) {$/;"	f	class:msg_buffer
+set_mask	framework/msg_reduction.h	/^            mask set_mask = (array.each_idx < (m + 1));$/;"	l
+size	framework/vmsg_array.h	/^  int size() {$/;"	f	class:vmsg_array
+size_	framework/vmsg_array.h	/^  int size_;$/;"	m	class:vmsg_array
+size_type	framework/aligned_allocator.hpp	/^        typedef typename std::allocator<T>::size_type size_type;$/;"	t	struct:aligned_allocator
+start	framework/scheduler.h	/^  int start, end;$/;"	l
+start	framework/scheduler.h	/^  size_t start, end;$/;"	l
+start	framework/scheduler.h	/^inline void scheduler<VertexValue, EdgeValue, MessageValue>::start() {$/;"	f	class:scheduler
+stat	framework/util.cpp	/^	int stat;$/;"	l
+status	framework/graph.h	/^		vector<bool> status;$/;"	m	class:graph
+status_count	framework/status_count.h	/^inline void* status_count(void* arg) {$/;"	f
+status_count_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> status_count_args[status_count_thread];$/;"	l
+status_count_array	framework/scheduler.h	/^  vector<size_t> status_count_array; $/;"	m	class:scheduler
+status_count_array	framework/status_count.h	/^  auto& status_count_array = s->status_count_array;$/;"	l
+status_count_thread	framework/conf.h	25;"	d
+status_count_tid	framework/scheduler.h	/^  pthread_t status_count_tid[status_count_thread];$/;"	l
+store	framework/sse_lib/vfloat.h	/^		void store(vfloat& dst) {$/;"	f	class:vfloat
+superstep	framework/scheduler.h	/^  int superstep() {$/;"	f	class:scheduler
+superstep_	framework/scheduler.h	/^  int superstep_;$/;"	m	class:scheduler
+tail	framework/msg_queue.h	/^  std::atomic<int> tail;$/;"	m	class:msg_queue
+test_args	framework/cpu_args.h	/^  test_args():count(0) {}$/;"	f	struct:test_args
+test_args	framework/cpu_args.h	/^struct test_args {$/;"	s
+tid	framework/compute_size.h	/^  int tid = ca -> tid;$/;"	l
+tid	framework/cpu_args.h	/^  int tid;$/;"	m	struct:cpu_args
+tid	framework/kernel.h	/^  int tid = ca -> tid;$/;"	l
+tid	framework/mover.h	/^	int tid = ca -> tid;$/;"	l
+tid	framework/msg_reduction.h	/^	int tid = ca -> tid;$/;"	l
+tid	framework/status_count.h	/^	int tid = ca -> tid;$/;"	l
+tid	framework/vertex_update.h	/^	int tid = ca -> tid;$/;"	l
+total_active	framework/scheduler.h	/^  int total_active = 0;$/;"	l
+total_active_vertices	framework/scheduler.h	/^    int total_active_vertices = 0;$/;"	l
+total_move	framework/scheduler.h	/^  double total_move = 0;$/;"	l
+total_reduce	framework/scheduler.h	/^  double total_reduce = 0;$/;"	l
+total_size	main.cpp	/^  int total_size = 0;$/;"	l
+total_update	framework/scheduler.h	/^  double total_update = 0;$/;"	l
+total_work	framework/scheduler.h	/^  double total_work = 0;$/;"	l
+update	framework/vertex_update.h	/^inline void* update(void* arg) {$/;"	f
+update_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> update_args[update_thread];$/;"	l
+update_thread	framework/conf.h	24;"	d
+update_tid	framework/scheduler.h	/^  pthread_t update_tid[update_thread];$/;"	l
+update_vertex	user_funcs.h	/^inline void update_vertex(MessageValue& msg, graph<VertexValue, EdgeValue>* g, size_t vertex_id) {$/;"	f
+update_vertex_block_size	framework/conf.h	62;"	d
+use	main.cpp	/^  bool use = 0;$/;"	l
+v	framework/mover.h	/^	msg<MessageValue> v;$/;"	l
+val	framework/sse_lib/vfloat.h	/^		__SSE val;$/;"	m	class:vfloat
+val	framework/sse_lib/vint32.h	/^  __SSEi val;$/;"	m	class:vint32
+value	framework/msg.h	/^		MessageValue value;$/;"	m	class:msg
+vertex_block_size	framework/conf.h	61;"	d
+vertex_index	framework/kernel.h	/^  size_t vertex_index;$/;"	l
+vertex_index	framework/vertex_update.h	/^	size_t vertex_index;$/;"	l
+vertex_offset	framework/kernel.h	/^  size_t &vertex_offset = s->vertex_offset;$/;"	l
+vertex_offset	framework/scheduler.h	/^  size_t vertex_offset;$/;"	m	class:scheduler
+vertex_offset	framework/vertex_update.h	/^	size_t &vertex_offset = s -> vertex_update_offset;$/;"	l
+vertex_update_offset	framework/scheduler.h	/^  size_t vertex_update_offset;$/;"	m	class:scheduler
+vertex_value	framework/graph.h	/^		VertexValue *vertex_value;$/;"	m	class:graph
+vertices	framework/graph.h	/^		vector<long long> vertices;$/;"	m	class:graph
+vertices_per_buffer	framework/conf.h	53;"	d
+vfloat	framework/sse_lib/vfloat.h	/^		vfloat(){}$/;"	f	class:vfloat
+vfloat	framework/sse_lib/vfloat.h	/^		vfloat(__SSE _val):val(_val){}$/;"	f	class:vfloat
+vfloat	framework/sse_lib/vfloat.h	/^		vfloat(float _val):val(_mm_set1x_ps(_val)){}$/;"	f	class:vfloat
+vfloat	framework/sse_lib/vfloat.h	/^class vfloat {$/;"	c
+vid	framework/scheduler.h	/^  int vid;$/;"	m	struct:in_degree_map
+vid	main.cpp	/^		int vid = atoi(first.substr(0, first.size() - 1).c_str()) - 1;$/;"	l
+vint32	framework/sse_lib/vint32.h	/^  vint32(){}$/;"	f	class:vint32
+vint32	framework/sse_lib/vint32.h	/^  vint32(const __SSEi& _val):val(_val){}$/;"	f	class:vint32
+vint32	framework/sse_lib/vint32.h	/^  vint32(const int& _val):val(_mm_set1_i(_val)){}$/;"	f	class:vint32
+vint32	framework/sse_lib/vint32.h	/^class vint32 {$/;"	c
+vlen	framework/conf.h	17;"	d
+vlen	framework/conf.h	19;"	d
+vmax	framework/sse_lib/vfloat.h	/^vfloat vmax(vfloat& a, vfloat& b) {$/;"	f
+vmax	framework/sse_lib/vint32.h	/^vint32 vmax(vint32& a, vint32& b) {$/;"	f
+vmin	framework/sse_lib/vfloat.h	/^vfloat vmin(vfloat& a, vfloat& b) {$/;"	f
+vmin	framework/sse_lib/vint32.h	/^vint32 vmin(vint32& a, vint32& b) {$/;"	f
+vmsg_array	framework/vmsg_array.h	/^  vmsg_array() {$/;"	f	class:vmsg_array
+vmsg_array	framework/vmsg_array.h	/^class vmsg_array {$/;"	c
+width	framework/msg_buffer.h	/^		int width;$/;"	m	class:msg_buffer
+width	framework/scheduler.h	/^  int width = ceil((double)g->num_vertices\/buffer_num_parts);$/;"	l
+width	framework/vmsg_array.h	/^  int width;$/;"	m	class:vmsg_array
+work_args	framework/scheduler.h	/^  cpu_args<VertexValue, EdgeValue, MessageValue> work_args[num_working_threads];$/;"	l
+work_tid	framework/scheduler.h	/^  pthread_t work_tid[num_working_threads];	$/;"	l
+zt	Session.vim	/^normal! zt$/;"	m
+~aligned_allocator	framework/aligned_allocator.hpp	/^        ~aligned_allocator() throw() { }$/;"	f	struct:aligned_allocator
+~graph	framework/graph.h	/^graph<VertexValue, EdgeValue>::~graph() {$/;"	f	class:graph
+~scheduler	framework/scheduler.h	/^scheduler<VertexValue, EdgeValue, MessageValue>::~scheduler() {$/;"	f	class:scheduler
+~vmsg_array	framework/vmsg_array.h	/^  ~vmsg_array() {$/;"	f	class:vmsg_array

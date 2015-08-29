@@ -1,0 +1,3 @@
+icc -O3 page_rank_no_msg.cpp -msse4.2 -o p -I. -openmp #-vec-report3
+#icc -O3 page_rank.cpp -msse4.2 -o s -I. -openmp -parallel  #-vec-report3
+#icc -O3 page_rank_no_msg.cpp -mmic -o s -I. -openmp -parallel  #-vec-report3

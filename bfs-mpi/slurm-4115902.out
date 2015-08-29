@@ -1,0 +1,630 @@
+Running on MIC and CPU
+TACC: Starting up job 4115902
+TACC: Starting parallel tasks...
+  mpiexec.hydra -iface br0 -configfile /home1/02687/binren/.slurm/config_file.4115902.I0xCeWMA -machinefile /home1/02687/binren/.slurm/job.4115902.hostlist.Y4mJ8opN  
+My rank is: 0
+My rank is: 1
+0 vertex count: 0
+0 line no: 1632803
+0 edges: 0
+Reordering...
+Reorder time: 2.28882e-05
+****** remote edges: ****** 0
+Iter: 0
+Rank: 0 status count done.
+1 vertex count: 1632803
+1 line no: 1632803
+1 edges: 30622564
+Reordering...
+Rank: 1 width is: 1024
+Rank: 1 vlen is: 64
+===========> Max length: 13734
+===========> Min length: 0
+Reorder time: 1.74011
+****** remote edges: ****** 0
+Iter: 0
+After receive ...
+
+Iter: 0...
+Active vertex count: 1
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 0...
+Active vertex count: 1
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000156879
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 0.000102043
+Mover threads finish.
+1 Gen time: 0.015054
+1 total msg block: 0
+Receive time: 5.60284e-05
+Insert time: 0.000205994
+0 remote msg receive done.
+Reduce time: 0.000234842
+Messages reduce done.
+Update time: 0.000216007
+
+Iter: 1
+Rank: 0 status count done.
+Insert time: 0.00145698
+1 remote msg receive done.
+Reduce time: 0.00145793
+Messages reduce done.
+Update time: 0.00143099
+
+Iter: 1
+After receive ...
+
+Iter: 1...
+Active vertex count: 14
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 1...
+Active vertex count: 14
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000154972
+Buffer columns allocated: 14
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.8903e-05
+Mover threads finish.
+1 Gen time: 0.0154729
+1 total msg block: 0
+Receive time: 2.00272e-05
+Insert time: 0.000221014
+0 remote msg receive done.
+Reduce time: 0.000213146
+Messages reduce done.
+Update time: 0.000222921
+
+Iter: 2
+Rank: 0 status count done.
+Insert time: 0.00147796
+1 remote msg receive done.
+Reduce time: 0.00152588
+Messages reduce done.
+Update time: 0.001508
+
+Iter: 2
+After receive ...
+
+Iter: 2...
+Active vertex count: 280
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 2...
+Active vertex count: 280
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000170946
+Buffer columns allocated: 280
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 7.00951e-05
+Mover threads finish.
+1 Gen time: 0.0155439
+1 total msg block: 0
+Receive time: 2.19345e-05
+Insert time: 0.000241995
+0 remote msg receive done.
+Reduce time: 0.000201941
+Messages reduce done.
+Update time: 0.000203848
+
+Iter: 3
+Rank: 0 status count done.
+Insert time: 0.00149012
+1 remote msg receive done.
+Reduce time: 0.00149608
+Messages reduce done.
+Update time: 0.00151491
+
+Iter: 3
+After receive ...
+
+Iter: 3...
+Active vertex count: 7893
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 3...
+Active vertex count: 7893
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000150919
+Buffer columns allocated: 7893
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.60419e-05
+Mover threads finish.
+1 Gen time: 0.0190132
+1 total msg block: 0
+Receive time: 2.19345e-05
+Insert time: 0.000221014
+0 remote msg receive done.
+Reduce time: 0.000205994
+Messages reduce done.
+Update time: 0.000209093
+
+Iter: 4
+Rank: 0 status count done.
+Insert time: 0.00147891
+1 remote msg receive done.
+Reduce time: 0.00148892
+Messages reduce done.
+Update time: 0.00152516
+
+Iter: 4
+After receive ...
+
+Iter: 4...
+Active vertex count: 167994
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 4...
+Active vertex count: 167994
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000172853
+Buffer columns allocated: 167994
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.60419e-05
+Mover threads finish.
+1 Gen time: 0.0565932
+1 total msg block: 0
+Receive time: 2.09808e-05
+Insert time: 0.000218868
+0 remote msg receive done.
+Reduce time: 0.000230789
+Messages reduce done.
+Update time: 0.000234842
+
+Iter: 5
+Rank: 0 status count done.
+Insert time: 0.00167918
+1 remote msg receive done.
+Reduce time: 0.001477
+Messages reduce done.
+Update time: 0.00364709
+
+Iter: 5
+After receive ...
+
+Iter: 5...
+Active vertex count: 750280
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 5...
+Active vertex count: 750280
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000168085
+Buffer columns allocated: 750280
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.48499e-05
+Mover threads finish.
+1 Gen time: 0.033253
+1 total msg block: 0
+Receive time: 2.00272e-05
+Insert time: 0.000203848
+0 remote msg receive done.
+Reduce time: 0.000216007
+Messages reduce done.
+Update time: 0.000207901
+
+Iter: 6
+Rank: 0 status count done.
+Insert time: 0.00150418
+1 remote msg receive done.
+Reduce time: 0.00175714
+Messages reduce done.
+Update time: 0.00151896
+
+Iter: 6
+After receive ...
+
+Iter: 6...
+Active vertex count: 477735
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 6...
+Active vertex count: 477735
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000158072
+Buffer columns allocated: 477735
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.50883e-05
+Mover threads finish.
+1 Gen time: 0.0169671
+1 total msg block: 0
+Receive time: 2.00272e-05
+Insert time: 0.000211
+0 remote msg receive done.
+Reduce time: 0.000212908
+Messages reduce done.
+Update time: 0.000236034
+
+Iter: 7
+Rank: 0 status count done.
+Insert time: 0.00148606
+1 remote msg receive done.
+Reduce time: 0.0014739
+Messages reduce done.
+Update time: 0.00149488
+
+Iter: 7
+After receive ...
+
+Iter: 7...
+Active vertex count: 89896
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 7...
+Active vertex count: 89896
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000157118
+Buffer columns allocated: 89896
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.79493e-05
+Mover threads finish.
+1 Gen time: 0.015733
+1 total msg block: 0
+Receive time: 2.21729e-05
+Insert time: 0.000224113
+0 remote msg receive done.
+Reduce time: 0.000219107
+Messages reduce done.
+Update time: 0.000209093
+
+Iter: 8
+Rank: 0 status count done.
+Insert time: 0.00152707
+1 remote msg receive done.
+Reduce time: 0.00146508
+Messages reduce done.
+Update time: 0.00148201
+
+Iter: 8
+After receive ...
+
+Iter: 8...
+Active vertex count: 9240
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 8...
+Active vertex count: 9240
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000169039
+Buffer columns allocated: 9240
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.69956e-05
+Mover threads finish.
+1 Gen time: 0.0164509
+1 total msg block: 0
+Receive time: 2.19345e-05
+Insert time: 0.000245094
+0 remote msg receive done.
+Reduce time: 0.000200987
+Messages reduce done.
+Update time: 0.000219107
+
+Iter: 9
+Rank: 0 status count done.
+Insert time: 0.00148416
+1 remote msg receive done.
+Reduce time: 0.00147104
+Messages reduce done.
+Update time: 0.00149822
+
+Iter: 9
+After receive ...
+
+Iter: 9...
+Active vertex count: 862
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 9...
+Active vertex count: 862
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000158072
+Buffer columns allocated: 862
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.50883e-05
+Mover threads finish.
+1 Gen time: 0.015542
+1 total msg block: 0
+Receive time: 2.09808e-05
+Insert time: 0.000225782
+0 remote msg receive done.
+Reduce time: 0.000240088
+Messages reduce done.
+Update time: 0.000221014
+
+Iter: 10
+Rank: 0 status count done.
+Insert time: 0.00148797
+1 remote msg receive done.
+Reduce time: 0.00151086
+Messages reduce done.
+Update time: 0.00146079
+
+Iter: 10
+After receive ...
+
+Iter: 10...
+Active vertex count: 91
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 10...
+Active vertex count: 91
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000163078
+Buffer columns allocated: 91
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.50883e-05
+Mover threads finish.
+1 Gen time: 0.015662
+1 total msg block: 0
+Receive time: 2.09808e-05
+Insert time: 0.000248909
+0 remote msg receive done.
+Reduce time: 0.000210047
+Messages reduce done.
+Update time: 0.000239849
+
+Iter: 11
+Rank: 0 status count done.
+Insert time: 0.00148821
+1 remote msg receive done.
+Reduce time: 0.001508
+Messages reduce done.
+Update time: 0.00151706
+
+Iter: 11
+After receive ...
+
+Iter: 11...
+Active vertex count: 8
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 11...
+Active vertex count: 8
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000153065
+Buffer columns allocated: 8
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 0.000111818
+Mover threads finish.
+1 Gen time: 0.016407
+1 total msg block: 0
+Receive time: 2.09808e-05
+Insert time: 0.000217915
+0 remote msg receive done.
+Reduce time: 0.000240088
+Messages reduce done.
+Update time: 0.000208139
+
+Iter: 12
+Rank: 0 status count done.
+Insert time: 0.00148702
+1 remote msg receive done.
+Reduce time: 0.00146914
+Messages reduce done.
+Update time: 0.0014751
+
+Iter: 12
+After receive ...
+
+Iter: 12...
+Active vertex count: 1
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 12...
+Active vertex count: 1
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.000154018
+Buffer columns allocated: 1
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 6.79493e-05
+Mover threads finish.
+1 Gen time: 0.015573
+1 total msg block: 0
+Receive time: 2.09808e-05
+Insert time: 0.000211954
+0 remote msg receive done.
+Reduce time: 0.000219107
+Messages reduce done.
+Update time: 0.000205994
+
+Iter: 13
+Rank: 0 status count done.
+Insert time: 0.00149107
+1 remote msg receive done.
+Reduce time: 0.00147295
+Messages reduce done.
+Update time: 0.00147891
+
+Iter: 13
+After receive ...
+
+Iter: 13...
+Active vertex count: 0
+No vertice is active, ending the computation :)
+
+0 all time : 0.00776601
+Total reduce time: 0.00284505
+Total working time: 0.00200939
+Total moving time: 9.53674e-07
+Total update time: 0.00283384
+Total comm time: 0.000947952
+Total insert time: 0.0028975
+Rank: 1 status count done.
+Accumulative total active vertices: 1504295
+After receive ...
+
+Iter: 13...
+Active vertex count: 0
+No vertice is active, ending the computation :)
+
+1 all time : 0.308391
+Total reduce time: 0.0195739
+Total working time: 0.169764
+Total moving time: 0.0957627
+Total update time: 0.0215521
+Total comm time: Finish.
+0.00030899
+Total insert time: 0.0195389
+Accumulative total active vertices: 1504295
+Finish.
+ 
+TACC: Shutdown complete. Exiting.

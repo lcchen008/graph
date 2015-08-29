@@ -1,0 +1,23 @@
+CC=mpic++
+
+SSE=-xhost
+
+CFLAGS = -O3 -I. $(SSE) -pthread -mcmodel=medium -std=c++0x -D BOOST_NO_CXX11_NON_PUBLIC_DEFAULTED_FUNCTIONS -I/work/02687/binren/threadpool -I/work/02687/binren/boost_1_56_0_cpu
+
+LIBS = -L/work/02687/binren/boost_1_56_0_cpu/stage/lib -lboost_system -lpthread
+
+LDFLAGS = $(SSE) $(LIBS)
+
+SRCS = $(wildcard ./*.cpp) $(wildcard ./framework/*.cpp)
+
+$(info $(SRCS))
+
+OBJS = $(SRCS:.cpp=.o)
+
+main.cpu: $(OBJS) $(wildcard ./*.h)
+	$(CC) $(LIBS) $(LDFLAGS) -o main.cpu $(OBJS)
+%.o : %.cpp
+	$(CC) $(CFLAGS) -c $< -o $*.o
+
+clean:
+	-rm main.cpu $(OBJS)

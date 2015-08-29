@@ -1,0 +1,104 @@
+Running on MIC and CPU
+TACC: Starting up job 4158292
+TACC: Starting parallel tasks...
+  mpiexec.hydra -iface br0 -configfile /home1/02687/binren/.slurm/config_file.4158292.x1f61tft -machinefile /home1/02687/binren/.slurm/job.4158292.hostlist.SchT8e9Q  
+My rank is: 0
+My rank is: 1
+0 vertex count: 332803
+0 line no: 1632803
+0 edges: 12283216
+Reordering...
+Rank: 0 width is: 512
+Rank: 0 vlen is: 16
+===========> Max length: 13734
+===========> Min length: 0
+Reorder time: 0.0587811
+****** remote edges: ****** 5492290
+Iter: 0
+Rank: 0 status count done.
+1 vertex count: 1300000
+1 line no: 1632803
+1 edges: 18339348
+Reordering...
+Rank: 1 width is: 1024
+Rank: 1 vlen is: 64
+===========> Max length: 789
+===========> Min length: 0
+Reorder time: 1.32237
+****** remote edges: ****** 5687454
+Iter: 0
+After receive ...
+
+Iter: 0...
+Active vertex count: 1632803
+***********Re-initing...**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 0...
+Active vertex count: 1632803
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.249736
+1 working threads finish.
+Mover threads finish.
+1 Gen time: 0.21213
+0 total msg block: 869043
+1 total msg block: 293924
+Receive time: 0.00714087
+Receive time: 0.00740314
+Insert time: 0.00549793
+0 remote msg receive done.
+Reduce time: 0.00468016
+Messages reduce done.
+Update time: 0.000324011
+
+Iter: 1
+Rank: 0 status count done.
+Insert time: 0.0273671
+1 remote msg receive done.
+Reduce time: 0.00394106
+Messages reduce done.
+Update time: 0.00148511
+
+Iter: 1
+After receive ...
+
+Iter: 1...
+Active vertex count: 1632803
+***********Re-initing...**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 1...
+Active vertex count: 1632803
+***********Re-initing...**************
+Buffer columns allocated: 321886
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Buffer columns allocated: 1197566
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.259756
+1 working threads finish.
+Mover threads finish.
+1 Gen time: 3.18491
+slurmd[c557-801]: *** JOB 4158292 CANCELLED AT 2014-09-25T14:26:03 DUE TO TIME LIMIT ***
+[mpiexec@c557-801.stampede.tacc.utexas.edu] HYD_pmcd_pmiserv_send_signal (./pm/pmiserv/pmiserv_cb.c:221): assert (!closed) failed
+[mpiexec@c557-801.stampede.tacc.utexas.edu] ui_cmd_cb (./pm/pmiserv/pmiserv_pmci.c:128): unable to send SIGUSR1 downstream
+[mpiexec@c557-801.stampede.tacc.utexas.edu] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[mpiexec@c557-801.stampede.tacc.utexas.edu] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:388): error waiting for event
+[mpiexec@c557-801.stampede.tacc.utexas.edu] main (./ui/mpich/mpiexec.c:745): process manager error waiting for completion

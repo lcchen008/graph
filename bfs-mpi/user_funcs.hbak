@@ -1,0 +1,53 @@
+#ifndef USER_FUNCS_
+#define USER_FUNCS_
+
+#include <float.h>
+#include <math.h>
+#include <unordered_set>
+
+#include "framework/sse_lib/vtypes.h"
+#include "framework/kernel.h"
+
+template <class VertexValue,
+          class EdgeValue,
+          class MessageValue>
+inline void generate_messages(msg_queue<MessageValue>* queues,
+                              size_t vertex_id,
+                              graph<VertexValue, EdgeValue>* g,
+                              scheduler<VertexValue, EdgeValue, MessageValue>* s) {
+  float msg;
+
+  for(size_t i = g->vertices[vertex_id]; i < g->vertices[vertex_id +1]; ++i) {
+    msg = g->vertex_value[vertex_id] + 1;  
+
+    int dst = g->global_to_local_map[g->edges[i]];
+    if (dst == -1) continue;
+    // Only send messages to vertices which have not been touched.
+    if (g->vertex_value[dst] > msg) {
+      emit_messages(queues, g->edges[i], msg, s);
+    }
+  }
+  g->status[vertex_id] = 0;
+}
+
+template <class VMessageValue,
+          class VertexValue,
+          class EdgeValue,
+          class MessageValue>
+inline void process_messages(vmsg_array<VMessageValue, MessageValue>& vmsgs,
+                             scheduler<VertexValue, EdgeValue, MessageValue>* s) {
+
+}
+
+template <class VertexValue,
+          class EdgeValue,
+          class MessageValue>
+inline void update_vertex(MessageValue& msg,
+                          graph<VertexValue, EdgeValue>* g,
+                          size_t vertex_id,
+                          scheduler<VertexValue, EdgeValue, MessageValue>* s) {
+  g->status[vertex_id] = 1;	
+  g->vertex_value[vertex_id] = msg;
+}
+
+#endif  // USER_FUNCS_

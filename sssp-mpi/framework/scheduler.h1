@@ -1,0 +1,366 @@
+#ifndef SCHEDULER
+#define SCHEDULER
+
+#include "sse_lib/vfloat.h"
+#include "graph.h"
+#include "msg_buffer.h"
+#include <iostream>
+#include "conf.h"
+#include "msg_queue.h"
+#include <vector>
+#include <cstdlib>
+#include <limits.h>
+#include <algorithm>
+#include <math.h>
+#include "util.h"
+using namespace std;
+
+struct in_degree_map {
+  int vid;
+  int in_degree;
+};
+
+bool compare(in_degree_map i1, in_degree_map i2) {
+  return i1.in_degree > i2.in_degree;
+}
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+class scheduler {
+ private:
+  void init();
+  int superstep_;
+ public:
+  //the graph to be processed
+  graph<VertexValue, EdgeValue> *g;	
+
+  //message buffers
+#ifdef MSG_INT
+  msg_buffer<vint, MessageValue> msg_buf[buffer_num_parts];
+#elif defined MSG_FLOAT 
+  msg_buffer<vfloat, MessageValue> msg_buf[buffer_num_parts];
+#elif defined MSG_DOUBLE
+  msg_buffer<vdouble, MessageValue> msg_buf[buffer_num_parts];
+#endif
+
+  //index_array is used for indexing the vmsg_array which contains messages for a specific vertex
+  vector<size_t> index_array;
+
+  //message queues for each thread to sequentially store messages
+  msg_queue<MessageValue> mq[num_queues * num_working_threads];
+
+  in_degree_map *in_degree;	
+
+  //because vertices are sorted in in-degree
+  size_t *index_map;
+
+  //working thread statuses
+  volatile bool active[num_working_threads];
+
+  pthread_mutex_t mutex;
+  size_t buffer_offset;
+  size_t vertex_offset;
+  size_t vertex_update_offset;
+
+  int superstep() {
+    return superstep_;
+  }
+
+  scheduler(graph<VertexValue, EdgeValue> *g);
+  void start();
+  int get_dst_buf(size_t dst_vertex);
+
+  //init for future iterations
+  void re_init() {
+    //init buffers
+    for(size_t i = 0; i < buffer_num_parts; i++) {
+      msg_buf[i].re_init();	
+    }
+
+    cout << "buffer init done..." << endl;
+
+    //init queues
+    for(size_t i = 0; i < num_working_threads * num_queues; i++) {
+      mq[i].re_init();
+    }
+
+    cout << "queue init done..." << endl;
+
+    //reset status array
+    //for(size_t i = 0; i < g -> num_vertices; i++) {
+    //  g -> status[i] = 1;			
+    //}
+
+    cout << "status init done..." << endl;
+
+    //reset index array
+    for(size_t i = 0; i < g -> num_vertices; i++) {
+      index_array[i] = -1;	
+    }
+
+    cout << "index array init dowe..." << endl;
+
+    //reset active array
+    //active threads...
+    for(int i = 0; i < num_working_threads; i++) {
+      active[i] = 1;	
+    }
+
+    cout << "active status init dowe..." << endl;
+
+    buffer_offset = 0;
+    vertex_offset = 0;
+    vertex_update_offset = 0;
+  }
+
+  //reorder the vertices according to the in-degrees...
+  void reorder();
+  ~scheduler();
+};
+
+#include "kernel.h"
+#include "mover.h"
+#include "msg_reduction.h"
+#include "compute_size.h"
+#include "vertex_update.h"
+#include "cpu_args.h"
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+scheduler<VertexValue, EdgeValue, MessageValue>::scheduler(graph<VertexValue, EdgeValue> *g) {
+  //get the graph from the input
+  this -> g = g;	
+  for(int i = 0; i < num_working_threads; i++) {
+    active[i] = 1;	
+  }
+  init();
+  superstep_ = 0;
+  pthread_mutex_init(&mutex, NULL);
+}
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+int scheduler<VertexValue, EdgeValue, MessageValue>::get_dst_buf(size_t dst_vertex) {
+  return dst_vertex / vertices_per_buffer;
+}
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+void scheduler<VertexValue, EdgeValue, MessageValue>::init() {
+  //partition the graph into parts along vertices.
+  index_array.resize(g->num_vertices, -1);
+  int remain = g->num_vertices;
+  int num_per_part = ceil((double)g->num_vertices/num_working_threads); 
+  int index = 0;
+  int start, end;
+  buffer_offset = 0;
+  vertex_offset = 0;
+  reorder();
+}
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+inline void scheduler<VertexValue, EdgeValue, MessageValue>::start() {
+  pthread_t work_tid[num_working_threads];	
+  pthread_t move_tid[num_moving_threads];	
+  pthread_t reduce_tid[reduce_thread];
+  pthread_t update_tid[update_thread];
+  cpu_args<VertexValue, EdgeValue, MessageValue> work_args[num_working_threads];
+  cpu_args<VertexValue, EdgeValue, MessageValue> move_args[num_moving_threads];
+  cpu_args<VertexValue, EdgeValue, MessageValue> reduce_args[reduce_thread];
+  cpu_args<VertexValue, EdgeValue, MessageValue> update_args[update_thread];
+
+  double all = 0;
+  double total_work = 0;
+  double total_move = 0;
+  double total_reduce = 0;
+  double total_update = 0;
+
+  for(int it = 0; it < num_iter; it++) {
+    cout << "Iter: " << it << "..." << endl;
+    double before_init = rtclock();
+    re_init();
+    double after_init = rtclock();
+
+    cout << "init time: " << after_init - before_init << endl;
+
+    cout << "re init done..." << endl;
+
+    /******** first, message generation stage.... ********/
+    //start worker threads...
+    for(int i = 0; i < num_working_threads; i++) {
+      work_args[i].tid = i;
+      work_args[i].scheduler = this;
+      pthread_create(&work_tid[i], NULL, &compute<VertexValue, EdgeValue, MessageValue>, &work_args[i]);
+    }
+
+    //start mover threads...
+    for(int i = 0; i < num_moving_threads; i++) {
+      move_args[i].tid = i;
+      move_args[i].scheduler = this;
+      pthread_create(&move_tid[i], NULL, &move<VertexValue, EdgeValue, MessageValue>, &move_args[i]);
+    }
+
+    double before_gen = rtclock();
+    double before_work = rtclock();
+    for(int i = 0; i < num_working_threads; i++) {
+      pthread_join(work_tid[i], NULL);	
+    }
+
+    double after_work = rtclock();
+    total_work += (after_work - before_work);
+
+    cout << "working threads finish..." << endl;
+
+    double before_move = rtclock();
+    for(int i = 0; i < num_moving_threads; i++) {
+      pthread_join(move_tid[i], NULL);	
+    }
+
+    double after_move = rtclock();
+    double after_gen = rtclock();
+
+    total_move += (after_move - before_work);
+    cout << "mover threads finish..." << endl;
+
+    cout << "gen time: " << (after_gen - before_gen) << endl;
+    all += (after_gen - before_gen);
+
+    /******** message reduction stage.... *********/
+    //start all threads, all threads take part in the reduction	
+    //before reduce, compute each vmsg array size
+
+    for(int i = 0; i < reduce_thread; i++) {
+      reduce_args[i].tid = i;		
+      reduce_args[i].scheduler = this;
+      pthread_create(&reduce_tid[i], NULL, &compute_size<VertexValue, EdgeValue, MessageValue>, &reduce_args[i]);
+    }
+
+    for(int i = 0; i < reduce_thread; i++) {
+      pthread_join(reduce_tid[i], NULL);		
+    }
+
+    //reduce
+
+    double before_reduce = rtclock();
+
+    for(int i = 0; i < reduce_thread; i++) {
+      reduce_args[i].tid = i;		
+      reduce_args[i].scheduler = this;
+      pthread_create(&reduce_tid[i], NULL, &reduce<VertexValue, EdgeValue, MessageValue>, &reduce_args[i]);
+    }
+
+    //join all the reduction threads...
+    for(int i = 0; i < reduce_thread; i++) {
+      pthread_join(reduce_tid[i], NULL);		
+    }
+
+    double after_reduce = rtclock();
+
+    total_reduce += (after_reduce - before_reduce);
+
+    cout << "reduce time: " << after_reduce - before_reduce << endl;
+
+    all += (after_reduce - before_reduce);
+
+    cout << "messages reduce done..." << endl;
+
+    /******************* vertex update stage *********************/
+    //second, vertex update stage...
+    double before_update = rtclock();
+    for(int i = 0; i < update_thread; i++) {
+      update_args[i].tid = i;	
+      update_args[i].scheduler = this;
+      pthread_create(&update_tid[i], NULL, &update<VertexValue, EdgeValue, MessageValue>, &update_args[i]);
+    }
+
+    //join all the update threads...
+    for(int i = 0; i < update_thread; i++) {
+      pthread_join(update_tid[i], NULL);	
+    }
+    double after_update = rtclock();
+
+    all += (after_update - before_update);
+    total_update += (after_update - before_update);
+    cout << "update time: " << (after_update - before_update) << endl;
+  }
+
+  cout << "all time: " << all << endl;
+  cout << "total reduce time: " << total_reduce << endl;
+  cout << "total working time: " << total_work << endl;
+  cout << "total moving time: " << total_move << endl;
+  cout << "total update time: " << total_update << endl;
+}
+
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+void scheduler<VertexValue, EdgeValue, MessageValue>::reorder() {
+
+  in_degree = new in_degree_map[g->num_vertices];
+  index_map = new size_t[g->num_vertices];		
+
+  //initialize
+  for(int i = 0; i < g->num_vertices; i++) {
+    in_degree[i].vid = i;	
+    in_degree[i].in_degree = 0;
+  }
+
+  for(int i = 0; i < g->num_vertices; i++) {
+    int n = g->vertices[i+1] - g->vertices[i];		
+
+    for(int j = g -> vertices[i]; j < g -> vertices[i+1]; j++)
+    {
+      in_degree[g->edges[j]].in_degree++;	
+    }
+  }
+
+  //sort according to indegree
+  sort(in_degree, in_degree + g->num_vertices - 1, compare);
+
+  //gen map_index
+  for(int i = 0; i < g->num_vertices; i++) {
+    if(in_degree[i].in_degree) {
+      index_map[in_degree[i].vid] = i;	
+    }
+  }
+
+  //calculate length of message buffer for each partition
+  int width = ceil((double)g->num_vertices/buffer_num_parts);
+
+  cout << "width is: " << width << endl;
+
+  size_t remain = g->num_vertices;
+  size_t start, end;
+  size_t index = 0;
+
+  for(int i = 0; i < buffer_num_parts; i++) {
+    start = index;		
+    if(remain >= width)	{
+      end = start + width - 1;			
+    }
+
+    else {
+      end = g->num_vertices - 1;	
+    }
+
+    size_t max_length = 0;
+    size_t min_length = INT_MAX;
+
+    for(int j = start; j <= end; j++) {
+      if(in_degree[j].in_degree > max_length)	
+        max_length = in_degree[j].in_degree;
+      if(in_degree[j].in_degree < min_length)
+        min_length = in_degree[j].in_degree;
+    }
+
+    //init the buffers;
+    max_length++;
+    msg_buf[i].set_length(max_length);
+
+    index = end + 1;
+    remain -= (end - start + 1);
+  }
+}
+
+template <class VertexValue, class EdgeValue, class MessageValue>
+scheduler<VertexValue, EdgeValue, MessageValue>::~scheduler() {
+  delete[] in_degree;
+  delete[] index_map;
+}
+
+#endif

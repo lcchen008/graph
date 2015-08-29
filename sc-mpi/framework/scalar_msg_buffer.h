@@ -1,0 +1,6 @@
+#ifndef SCALAR_MSG_BUFFER_H
+#define SCALAR_MSG_BUFFER_H 
+
+
+
+#endif /* SCALAR_MSG_BUFFER_H */

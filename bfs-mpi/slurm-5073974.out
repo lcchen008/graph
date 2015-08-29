@@ -1,0 +1,18 @@
+Lmod has detected the following error: Swap failed: "mvapich2" is not
+loaded.
+
+Running on MIC and CPU
+TACC: Starting up job 5073974
+TACC: Starting parallel tasks...
+# Command used to run job in: /home1/02687/binren/.slurm/job.5073974.runcmd.A6OoBEwz 
+My rank is: 0
+My rank is: 1
+0 vertex count: 0
+0 line no: 1632803
+0 edges: 0
+Reordering...
+Reorder time: 1.97887e-05
+****** remote edges: ****** 0
+Iter: 0
+Rank: 0 status count done.
+slurmd[c557-502]: *** JOB 5073974 CANCELLED AT 2015-04-06T09:53:07 ***

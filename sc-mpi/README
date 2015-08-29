@@ -1,0 +1,6 @@
+Files to edit by users: 
+--+ main.cpp      -- includes most input preparation logic and
+                     framework invocation.
+
+--+ user_funcs.h  -- contains user-defined logics for the essential
+                     steps of a graph application.

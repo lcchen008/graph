@@ -1,0 +1,11 @@
+Lmod has detected the following error: Swap failed: "mvapich2" is not
+loaded.
+
+Running on MIC and CPU
+TACC: Starting up job 5077085
+TACC: Starting parallel tasks...
+# Command used to run job in: /home1/02687/binren/.slurm/job.5077085.runcmd.0HWCz3VA 
+[proxy:0:1@c557-601-mic0.stampede.tacc.utexas.edu] HYDU_create_process (./utils/launch/launch.c:556): execvp error on file main.mic (No such file or directory)
+TACC: MPI job exited with code: 255
+ 
+TACC: Shutdown complete. Exiting.

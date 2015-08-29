@@ -1,0 +1,66 @@
+Running on MIC and CPU
+TACC: Starting up job 4169598
+TACC: Starting parallel tasks...
+  mpiexec.hydra -iface br0 -configfile /home1/02687/binren/.slurm/config_file.4169598.Sp43wjHT -machinefile /home1/02687/binren/.slurm/job.4169598.hostlist.bSBhDKK8  
+My rank is: 0
+My rank is: 1
+0 vertex count: 213357
+0 line no: 425957
+0 edges: 1084263
+Reordering...
+Max degree: 343
+Reorder time: 0.068826
+****** remote edges: ****** 111771
+Iter: 0
+Rank: 0 status count done.
+1 vertex count: 212600
+1 line no: 425957
+1 edges: 1015469
+Reordering...
+Max degree: 290
+Reorder time: 0.34246
+****** remote edges: ****** 111771
+Iter: 0
+After receive ...
+
+Iter: 0...
+Active vertex count: 425957
+***********Re-initing...**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 0...
+Active vertex count: 425957
+***********Re-initing...**************
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 0.0452139
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+Mover threads finish.
+1 Gen time: 0.00585294
+0 total msg block: 0
+1 total msg block: 36811
+Receive time: 0.00657201
+Receive time: 0.00720406
+Insert time: 0.000248909
+0 remote msg receive done.
+Insert time: 0.0014329
+1 remote msg receive done.
+Reduce time: 0.025389
+Messages reduce done.
+Update time: 0.00146818
+
+Iter: 1
+Rank: 1 status count done.
+slurmd[c557-204]: *** JOB 4169598 CANCELLED AT 2014-09-27T16:14:28 DUE TO TIME LIMIT ***
+[mpiexec@c557-204.stampede.tacc.utexas.edu] HYD_pmcd_pmiserv_send_signal (./pm/pmiserv/pmiserv_cb.c:221): assert (!closed) failed
+[mpiexec@c557-204.stampede.tacc.utexas.edu] ui_cmd_cb (./pm/pmiserv/pmiserv_pmci.c:128): unable to send SIGUSR1 downstream
+[mpiexec@c557-204.stampede.tacc.utexas.edu] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[mpiexec@c557-204.stampede.tacc.utexas.edu] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:388): error waiting for event
+[mpiexec@c557-204.stampede.tacc.utexas.edu] main (./ui/mpich/mpiexec.c:745): process manager error waiting for completion

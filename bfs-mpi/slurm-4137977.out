@@ -1,0 +1,11 @@
+Running on MIC and CPU
+TACC: Starting up job 4137977
+TACC: Starting parallel tasks...
+  mpiexec.hydra -iface br0 -configfile /home1/02687/binren/.slurm/config_file.4137977.O1wredGn -machinefile /home1/02687/binren/.slurm/job.4137977.hostlist.WsmbdT7W  
+[proxy:0:1@c557-902-mic0.stampede.tacc.utexas.edu] HYDU_create_process (./utils/launch/launch.c:111): execvp error on file main.mic (No such file or directory)
+slurmd[c557-902]: *** JOB 4137977 CANCELLED AT 2014-09-21T20:58:10 DUE TO TIME LIMIT ***
+[mpiexec@c557-902.stampede.tacc.utexas.edu] HYD_pmcd_pmiserv_send_signal (./pm/pmiserv/pmiserv_cb.c:221): assert (!closed) failed
+[mpiexec@c557-902.stampede.tacc.utexas.edu] ui_cmd_cb (./pm/pmiserv/pmiserv_pmci.c:128): unable to send SIGUSR1 downstream
+[mpiexec@c557-902.stampede.tacc.utexas.edu] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[mpiexec@c557-902.stampede.tacc.utexas.edu] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:388): error waiting for event
+[mpiexec@c557-902.stampede.tacc.utexas.edu] main (./ui/mpich/mpiexec.c:745): process manager error waiting for completion

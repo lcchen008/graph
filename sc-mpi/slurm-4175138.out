@@ -1,0 +1,10 @@
+Running on MIC and CPU
+TACC: Starting up job 4175138
+TACC: Starting parallel tasks...
+  mpiexec.hydra -iface br0 -configfile /home1/02687/binren/.slurm/config_file.4175138.JyzEFb5G -machinefile /home1/02687/binren/.slurm/job.4175138.hostlist.izlYMd80  
+My rank is: 0
+My rank is: 1
+APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+TACC: MPI job exited with code: 11
+ 
+TACC: Shutdown complete. Exiting.

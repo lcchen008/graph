@@ -1,0 +1,193 @@
+Lmod has detected the following error: Swap failed: "mvapich2" is not
+loaded.
+
+Running on MIC and CPU
+TACC: Starting up job 5082173
+TACC: Starting parallel tasks...
+# Command used to run job in: /home1/02687/binren/.slurm/job.5082173.runcmd.jObkWaAJ 
+My rank is: 0
+My rank is: 1
+0 vertex count: 0
+0 line no: 38394
+0 edges: 0
+Reordering...
+Reorder time: 1.69277e-05
+****** remote edges: ****** 0
+Iter: 0
+Rank: 0 status count done.
+1 vertex count: 38394
+1 line no: 38394
+1 edges: 191457899
+Reordering...
+Rank: 1 width is: 32
+Rank: 1 vlen is: 64
+===========> Max length: 24997
+===========> Min length: 0
+Reorder time: 0.0407629
+****** remote edges: ****** 0
+Iter: 0
+After receive ...
+
+Iter: 0...
+Active vertex count: 20205
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 0...
+Active vertex count: 20205
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 8.89301e-05
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 8.10623e-05
+Mover threads finish.
+1 Gen time: Insert time: 2.09808e-05
+0 remote msg receive done.
+0.140994
+1 total msg block: 0
+Receive time: 5.07832e-05
+Reduce time: 1.09673e-05
+Messages reduce done.
+Update time: 1.00136e-05
+
+Iter: 1
+Rank: 0 status count done.
+Insert time: 0.00157881
+1 remote msg receive done.
+Reduce time: 0.00155807
+Messages reduce done.
+Update time: 0.00153899
+
+Iter: 1
+After receive ...
+
+Iter: 1...
+Active vertex count: 3004
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: Rank: 10
+***********Re-init done.**************
+ status count done.
+After receive ...
+0 working threads finish.
+
+Iter: 1...
+Active vertex count: 3004
+***********Re-initing...**************
+Mover threads finish.
+0 Gen time: 8.39233e-05
+Buffer columns allocated: 18189
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 5.10216e-05
+Insert time: 1.09673e-05
+0 remote msg receive done.
+Mover threads finish.
+1 Gen time: 0.052156
+Reduce time: 9.77516e-06
+Messages reduce done.
+Update time: 1.00136e-05
+
+Iter: 2
+Rank: 0 status count done.
+1 total msg block: 0
+Receive time: 1.38283e-05
+Insert time: 0.00152516
+1 remote msg receive done.
+Reduce time: 0.00149512
+Messages reduce done.
+Update time: 0.0014801
+
+Iter: 2
+After receive ...
+
+Iter: 2...
+Active vertex count: 7
+***********Re-initing...**************
+Buffer columns allocated: 0
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+Rank: 1 status count done.
+After receive ...
+
+Iter: 2...
+Active vertex count: 7
+***********Re-initing...**************
+0 working threads finish.
+Mover threads finish.
+0 Gen time: 6.8903e-05
+Buffer columns allocated: 11184
+Total write: 0
+Total read: 0
+***********Re-init done.**************
+1 working threads finish.
+0 total msg block: 0
+Receive time: 7.58171e-05
+Insert time: 1.12057e-05
+0 remote msg receive done.
+Mover threads finish.
+1 Gen time: 0.041573
+1 total msg block: 0
+Receive time: 1.5974e-05
+Reduce time: 1.00136e-05
+Messages reduce done.
+Update time: 9.77516e-06
+
+Iter: 3
+Rank: 0 status count done.
+Insert time: 0.00152993
+1 remote msg receive done.
+Reduce time: 0.00152493
+Messages reduce done.
+Update time: 0.00152111
+
+Iter: 3
+After receive ...
+
+Iter: 3...
+Active vertex count: 0
+No vertice is active, ending the computation :)
+
+0 all time : 0.000302315
+Total reduce time: 3.0756e-05Rank: 1
+Total working time: 1.00136e-05
+Total moving time: 0.000241756
+Total update time: 2.98023e-05
+Total comm time: 0.000207901 status count done.
+After receive ...
+
+Total insert time: 4.31538e-05
+Accumulative total active vertices: 23216
+Finish.
+
+Iter: 3...
+Active vertex count: 0
+No vertice is active, ending the computation :)
+
+1 all time : 0.243841
+Total reduce time: 0.00457811
+Total working time: 0.0348411
+Total moving time: 0.234705
+Total update time: 0.00454021
+Total comm time: 8.05855e-05
+Total insert time: 0.0046339
+Accumulative total active vertices: 23216
+Finish.
+ 
+TACC: Shutdown complete. Exiting.

@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/opt/apps/xalt/0.4.0/libexec/xalt_run_submission.py", line 38, in <module>
+    logger = config_logger()
+  File "/opt/apps/xalt/0.4.0/libexec/xalt_util.py", line 30, in config_logger
+    syslog = SysLogHandler(address='/dev/log', facility='local3')
+  File "/usr/lib64/python2.6/logging/handlers.py", line 721, in __init__
+    self._connect_unixsocket(address)
+  File "/usr/lib64/python2.6/logging/handlers.py", line 737, in _connect_unixsocket
+    self.socket.connect(address)
+  File "<string>", line 1, in connect
+socket.error: [Errno 111] Connection refused
+TACC: Starting up job 4159762
+TACC: Starting parallel tasks...
+Num of vertices: 1632803
+Read done.
+Set vertex value done.
+Time: 3.86
+ 
+TACC: Shutdown complete. Exiting.
+Traceback (most recent call last):
+  File "/opt/apps/xalt/0.4.0/libexec/xalt_run_submission.py", line 38, in <module>
+    logger = config_logger()
+  File "/opt/apps/xalt/0.4.0/libexec/xalt_util.py", line 30, in config_logger
+    syslog = SysLogHandler(address='/dev/log', facility='local3')
+  File "/usr/lib64/python2.6/logging/handlers.py", line 721, in __init__
+    self._connect_unixsocket(address)
+  File "/usr/lib64/python2.6/logging/handlers.py", line 737, in _connect_unixsocket
+    self.socket.connect(address)
+  File "<string>", line 1, in connect
+socket.error: [Errno 111] Connection refused

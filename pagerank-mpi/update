@@ -1,0 +1,4 @@
+#! /bin/sh
+find . -name "*.h" -o -name "*.cu" -o -name "*.cpp" -o -name "*.cxx"> cscope.files
+cscope -bq -i cscope.files
+ctags -R --langmap=c:+.cu -I__no_init --c-kinds=+l 
